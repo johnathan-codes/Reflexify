@@ -1,0 +1,6 @@
+.gradle/
+Temp/
+Logs/
+Library/
+obj/
+.vs/
