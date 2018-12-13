@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\DestroyOnTouch.cs" />
     <Compile Include="Assets\Scripts\DotDespawner.cs" />
     <Compile Include="Assets\Scripts\DotSpawner.cs" />
+    <Compile Include="Assets\Scripts\ResetGame.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Git/Reflexify/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

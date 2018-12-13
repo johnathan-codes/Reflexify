@@ -15,7 +15,9 @@ public class DotDespawner : MonoBehaviour
     void Start()
     {
         koniecHry.enabled = false;
-        hratZnova.enabled = false;
+        hratZnova.interactable = false;
+        hratZnova.gameObject.SetActive(false);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,14 +36,15 @@ public class DotDespawner : MonoBehaviour
         if(!koniec)
         { 
             zivotyText.text = "Zostávajúce životy: " + zostavajuceZivotyPocet;
-            cas.text = "Čas hrania: " + Time.time;
+            cas.text = "Čas hrania: " + Time.timeSinceLevelLoad;
 
             if(zostavajuceZivotyPocet == 0 && koniec == false )
             {
                 koniecHry.enabled = true;
-                koniecHry.text = "Koniec hry! \n Celková dĺžka hrania:\n" + Time.time;
+                koniecHry.text = "Koniec hry! \n Celková dĺžka hrania:\n" + Time.timeSinceLevelLoad;
                 koniec = true;
-                hratZnova.enabled = true;
+                hratZnova.interactable = true;
+                hratZnova.gameObject.SetActive(true);
             }
         }
     }
